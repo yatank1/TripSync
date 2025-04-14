@@ -1,0 +1,33 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Override Bootstrap Card Padding */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Custom Spacing */
+.section-padding {
+  padding: 5rem 0;
+}
+
+/* Custom Shadows */
+.custom-shadow {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}

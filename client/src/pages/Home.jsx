@@ -19,7 +19,7 @@ const Home = () => {
           hotelService.getAllHotels(),
           cabService.getAllCabs()
         ]);
-        
+
         setFeaturedHotels(hotelsResponse.data.slice(0, 3));
         setFeaturedCabs(cabsResponse.data.slice(0, 3));
       } catch (error) {
@@ -51,7 +51,7 @@ const Home = () => {
             rating: 4.5
           }
         ]);
-        
+
         setFeaturedCabs([
           {
             id: 1,
@@ -83,7 +83,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <Hero />
-      
+
       {/* Featured Hotels Section */}
       <Container className="py-5">
         <Row className="mb-4">
@@ -95,7 +95,7 @@ const Home = () => {
             <Button variant="outline-primary" href="/hotels">View All</Button>
           </Col>
         </Row>
-        
+
         <Row>
           {featuredHotels.map(hotel => (
             <Col key={hotel.id} md={6} lg={4} className="mb-4">
@@ -104,7 +104,7 @@ const Home = () => {
           ))}
         </Row>
       </Container>
-      
+
       {/* Why Choose Us Section */}
       <div className="bg-light py-5">
         <Container>
@@ -114,7 +114,7 @@ const Home = () => {
               <p className="text-muted">We offer the best travel experience with our unique features</p>
             </Col>
           </Row>
-          
+
           <Row>
             <Col md={4} className="mb-4">
               <Card className="border-0 bg-transparent text-center h-100">
@@ -129,7 +129,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            
+
             <Col md={4} className="mb-4">
               <Card className="border-0 bg-transparent text-center h-100">
                 <div className="icon-box mx-auto mb-4 d-flex align-items-center justify-content-center bg-warning rounded-circle" style={{ width: '80px', height: '80px' }}>
@@ -143,7 +143,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            
+
             <Col md={4} className="mb-4">
               <Card className="border-0 bg-transparent text-center h-100">
                 <div className="icon-box mx-auto mb-4 d-flex align-items-center justify-content-center bg-success rounded-circle" style={{ width: '80px', height: '80px' }}>
@@ -160,7 +160,7 @@ const Home = () => {
           </Row>
         </Container>
       </div>
-      
+
       {/* Featured Cabs Section */}
       <Container className="py-5">
         <Row className="mb-4">
@@ -172,7 +172,7 @@ const Home = () => {
             <Button variant="outline-primary" href="/cabs">View All</Button>
           </Col>
         </Row>
-        
+
         <Row>
           {featuredCabs.map(cab => (
             <Col key={cab.id} md={6} lg={4} className="mb-4">
@@ -181,7 +181,7 @@ const Home = () => {
           ))}
         </Row>
       </Container>
-      
+
       {/* Testimonials Section */}
       <div className="bg-primary text-white py-5">
         <Container>
@@ -191,7 +191,7 @@ const Home = () => {
               <p>Thousands of travelers trust TripSync for their travel needs</p>
             </Col>
           </Row>
-          
+
           <Row>
             <Col md={4} className="mb-4">
               <Card className="bg-white text-dark h-100">
@@ -218,7 +218,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            
+
             <Col md={4} className="mb-4">
               <Card className="bg-white text-dark h-100">
                 <Card.Body>
@@ -244,7 +244,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            
+
             <Col md={4} className="mb-4">
               <Card className="bg-white text-dark h-100">
                 <Card.Body>
@@ -273,7 +273,7 @@ const Home = () => {
           </Row>
         </Container>
       </div>
-      
+
       {/* Newsletter Section */}
       <Container className="py-5">
         <Row className="justify-content-center text-center">

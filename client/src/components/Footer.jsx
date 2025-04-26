@@ -21,7 +21,7 @@ const Footer = () => {
               <a href="#" className="text-light fs-5"><i className="bi bi-linkedin"></i></a>
             </div>
           </Col>
-          
+
           <Col md={2} className="mb-4 mb-md-0">
             <h5 className="mb-4">Quick Links</h5>
             <ul className="list-unstyled">
@@ -32,7 +32,7 @@ const Footer = () => {
               <li className="mb-2"><Link to="/contact" className="text-light text-decoration-none">Contact</Link></li>
             </ul>
           </Col>
-          
+
           <Col md={3} className="mb-4 mb-md-0">
             <h5 className="mb-4">Services</h5>
             <ul className="list-unstyled">
@@ -43,7 +43,7 @@ const Footer = () => {
               <li className="mb-2"><Link to="#" className="text-light text-decoration-none">Travel Insurance</Link></li>
             </ul>
           </Col>
-          
+
           <Col md={3}>
             <h5 className="mb-4">Contact Us</h5>
             <ul className="list-unstyled">
@@ -60,9 +60,9 @@ const Footer = () => {
             </div>
           </Col>
         </Row>
-        
+
         <hr className="my-4" />
-        
+
         <Row>
           <Col className="text-center">
             <p className="mb-0">&copy; {new Date().getFullYear()} TripSync. All rights reserved.</p>

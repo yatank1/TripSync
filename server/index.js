@@ -5,6 +5,9 @@ const dotenv = require('dotenv');
 // Load environment variables
 dotenv.config();
 
+// Import database connection
+const { pool, testConnection } = require('./config/db');
+
 // Import routes
 const authRoutes = require('./routes/auth');
 const hotelRoutes = require('./routes/hotels');
@@ -35,7 +38,22 @@ app.get('/', (req, res) => {
 // Port
 const PORT = process.env.PORT || 5000;
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Test database connection and start server
+const startServer = async () => {
+  try {
+    // Test database connection
+    await testConnection();
+    
+    // Start server
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Failed to start server:', error);
+  }
+};
+
+startServer();
+
+// Start the server
+startServer();
